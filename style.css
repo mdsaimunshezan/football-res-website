@@ -1,0 +1,331 @@
+/* Css Variables */
+:root{
+    --bg-color:#2d25a0;
+    --white:#fff;
+    --btn-color:#E02C6D;
+    --text-color:#6C6C6C;
+    --hover-color:rgb(216, 79, 152);
+}
+
+/* Gooble Style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Coomon Style */
+.container{
+    max-width: 80vw;
+    margin: 0px auto;
+    margin-top: 85px;
+}
+.btn{
+    background: var(--btn-color);
+    padding: 10px 24px;
+    height: 44px;
+    border: none;
+    color: var(--white);
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 27px;
+    cursor: pointer;
+    position: relative;
+
+    
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transform: scale(0,1);
+    transition: .5s ease-in-out;
+    transform-origin: 0% 100%;
+    border-bottom:3px solid var(--white);
+   
+}
+.btn:hover:before{
+    transform: scale(1,1);  
+}
+.btn__left {
+    margin-left: 10px;
+}
+
+/*=========================================
+             Banner Section 
+=============================================*/
+.banner{
+    width: 100%;
+    height: 680px;
+    background: var(--bg-color);
+    display: grid;
+    grid-template-columns: repeat(2,1fr );
+    grid-gap: 10px 5px;
+    align-items: center;
+    padding: 10px 100px;
+}
+.banner__title {
+    color: var(--white);
+    font-size: 64px;
+    line-height: 80px;
+    font-weight: bold;
+}
+.banner__img {
+    width: 100%;
+    height: 100%;
+}
+
+/*=========================================
+             Players Section 
+=============================================*/
+
+.players{
+    display: grid;
+    grid-template-columns: repeat(3,1fr );
+    grid-gap: 30px;
+}
+.player {
+    padding: 10px;
+    box-shadow: 3px 2px 20px 10px lightgray;
+}
+.player__image {
+    max-width: 100%;
+}
+.player__name {
+    font-size: 28px;
+    font-weight: 700;
+    padding: 10px 0px;
+}
+.player__description {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 26px;
+}
+
+/*=========================================
+             Players Section 
+=============================================*/
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(2,1fr );
+    align-items: center;
+    grid-gap: 10px 30px;
+    margin-top: 164px;
+}
+.highlights__title {
+    font-size: 48px;
+}
+.highlights__decription {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 26px;
+    text-align: justify;
+}
+.highlights__img {
+    max-width: 100%;
+}
+
+
+
+/*=========================================
+             Last Match Section 
+=============================================*/
+
+.match {
+    background-image: url("./images/main/bg.jpg");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 150px;
+
+}
+.last-match{
+    display: grid;
+    grid-template-columns: repeat(3,1fr );
+    align-items: center;
+    text-align: center;
+    padding:70px 20px;
+}
+
+.last-match__title {
+    color: var(--white);
+    font-size: 25px;
+    margin-top: 40px;
+}
+.last-match__title--active {
+    color: orangered;
+}
+.last-match__image {
+    width: 100px;
+    height: 100px;
+
+}
+.last-match__name {
+    color: white;
+    font-weight: 700;
+}
+.last-match__gole, .last-match__score {
+    color: orangered;
+    margin-top: 20px;
+}
+
+/*=========================================
+             Blog  Section 
+=============================================*/
+
+
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(3,1fr );
+    grid-gap: 10px;
+    margin-top: 100px;
+}
+.blog--one {
+   grid-row-start: 1;
+   grid-row-end: 3;
+}
+.blog__image--one {
+    height: 83%;
+    object-fit: cover;
+}
+.blog__image {
+    max-width:100%;
+    
+}
+.blog__title {
+    text-align: center;
+}
+.blog__link {
+    font-size: 20px;
+   
+}
+
+
+
+
+/*=========================================
+             Footer Section 
+=============================================*/
+
+.footer {
+    text-align: center;
+    margin-top: 160px;
+    margin-bottom: 50px;
+}
+.footer__image {
+    width: 400px;
+}
+.footer__social {
+    margin: 20px 0px;
+    
+}
+.footer__social__item {
+    padding: 0px 10px;
+    color: var(--text-color);
+    background: lightgray;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+   
+}
+
+
+
+
+
+
+/*===================================================
+             Responsive section
+======================================================*/
+
+
+/*--------- Responsive for tablet Devise------------ */
+@media (max-width:768px) {
+    .banner {
+        grid-gap: 10px;
+    }
+
+    .banner__title {
+        font-size: 35px;
+        line-height: 49px;
+    }
+    .btn {
+        padding: 10px 12px;
+        font-size: 17px;
+    }
+    .btn__left {
+        margin-left: 5px;
+    }
+    .players {
+        grid-template-columns: repeat(2,1fr );
+    }
+    .highlights__title {
+        font-size: 30px;
+    }
+    .blogs {
+        grid-template-columns: repeat(2,1fr );
+    }
+
+    
+}
+
+
+/*--------- Responsive for mobile Devise------------ */
+
+@media (max-width:480px) {
+
+    .banner {
+        grid-template-columns: repeat(1,1fr );
+        height: 470px;
+    }
+    .banner__title {
+        font-size: 30px;
+        line-height: 45px; 
+    }
+    .btn {
+        padding: 8px 10px;
+        height: 39px;
+        font-size: 15px;
+    }
+    .container {
+        margin-top: 40px;
+    }
+    .players {
+        grid-template-columns: repeat(1,1fr );
+        grid-gap: 20px;
+    }
+    .highlights {
+        grid-template-columns: repeat(1,1fr );
+        grid-gap: 30px 30px;
+        margin-top: 100px;
+    }
+    .highlights__title {
+        font-size: 35px;
+    }
+    .last-match {
+        grid-template-columns: repeat(1,1fr );
+        grid-gap: 30px 0px;
+    }
+    .blogs {
+        grid-template-columns: repeat(1,1fr );
+        grid-gap: 20px 10px;
+    }
+    .footer__image {
+        width: 300px;
+    }
+  
+}
+
+
